@@ -1,38 +1,54 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
-import LinkedIn from "../icons/LinkedIn.astro";
-import Github from "../icons/Github.astro";
+import LinkedIn from "../assets/icons/LinkedIn.astro";
+import Github from "../assets/icons/Github.astro";
+import Email from "../assets/icons/Email.astro";
+import Brief from "../assets/icons/Brief.astro";
+import Code from "../assets/icons/Code.astro";
 import SocialIcons from "../components/SocialIcons.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import ImageProfile from "../assets/images/foto.jpeg";
 ---
 
-<Layout title="Portafolio Daniel Muñoz">
+<Layout
+  title="Portafolio Daniel Muñoz - Desarrollador Web con 2 años de experiencia"
+  description="Contratame para crear aplicaciones web intuitivas que brindan soluciones unicas de software"
+>
   <main>
-    <section class="w-full lg:w-[840px] mx-auto py-40">
-      <div class="flex flex-row gap-4">
-        <img
+    <SectionContainer class="py-16 lg:py-44">
+      <div class="flex flex-col lg:flex-row gap-4">
+        <Image
           class="rounded-full w-80 h-80"
-          src="http://infinitprogram.com/wp-content/uploads/2024/01/foto-perfil-cuadrada.jpeg"
+          src={ImageProfile}
           alt="daniel-foto"
         />
         <div class="flex flex-col justify-end items-end pb-6">
-          <h1 class="text-white text-5xl font-bold w-full flex justify-start flex-row gap-x-4 pb-4">
+          <h1
+            class="text-white text-5xl font-bold w-full flex justify-start flex-row gap-x-4 pb-4"
+          >
             Hey, Soy Daniel <div class="flex justify-center items-center">
               <Badge>Disponible</Badge>
             </div>
           </h1>
           <h2 class="text-xl">
-            <span>+2 años de experiencia.</span>
-            <span class="text-cyan-400/90">Desarrollador Web</span><span class=" text-gray-400/90"
-              >. De Colombia, Medellín.</span
+            <span>+2 años de experiencia en el</span>
+            <span class="text-sky-500/90">Desarrollado Web</span><span
+              class="text-gray-500/90">. De Colombia, Medellín.</span
             >
-            <span> Enfocado en desarrollo de aplicaciones web.</span>
+            <span>
+              Enfocado en la creación de aplicaciones web, <span
+                class="text-yellow-200">modernas e intuitivas.</span
+              ></span
+            >
           </h2>
 
           <nav class="flex items-center gap-x-4 justify-start w-full pt-4">
             <SocialIcons href="https://www.linkedin.com/in/dmunoz05/">
-              <LinkedIn class="w-6 h-6" />
+              <LinkedIn class="size-6" />
               LinkedIn
             </SocialIcons>
             <SocialIcons
@@ -40,12 +56,32 @@ import SocialIcons from "../components/SocialIcons.astro";
               target="_blank"
               rel="noopener"
             >
-              <Github class="w-6 h-6" />
+              <Github class="size-6" />
               Github
+            </SocialIcons>
+            <SocialIcons href="#">
+              <Email class="size-6" />
+              Gmail
             </SocialIcons>
           </nav>
         </div>
       </div>
-    </section>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Brief class="size-6" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos" class="my-32">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
   </main>
 </Layout>

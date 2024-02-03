@@ -1,0 +1,59 @@
+---
+import HTML from "./../assets/icons/Html.astro";
+import JavaScript from "./../assets/icons/JavaScript.astro";
+import Php from "./../assets/icons/Php.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: HTML,
+  },
+  JavaScript : {
+    name: "JavaScript",
+    class: "bg-white text-black",
+    icon: JavaScript,
+  },
+  Php : {
+    name: "Php",
+    class: "bg-black text-white",
+    icon: Php,
+  }
+};
+
+const PROJECTS = [
+  {
+    title: "Simulador de Credito - Feinco",
+    description:
+      "Elije el crédito que quieres solicitar, calcula el valor de la cuota o el monto que puedes solicitar de acuerdo con las necesidades de crédito y capacidad de pago.",
+    link: "https://feinco.com.co/simula-tu-credito/",
+    github: "https://github.com/dmunoz05/simulator-credit",
+    image: "/feinco.webp",
+    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row pb-6">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/100"
+        src={image}
+        alt={`Captura de pantalla del proyecto${image}`}
+      />
+    </article>
+  ))
+}

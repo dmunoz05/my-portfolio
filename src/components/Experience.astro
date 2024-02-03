@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCIE = [
+  {
+    title: "Desarrollador de software",
+    date: "Actualmente...",
+    description: "Diseñando páginas web que se enfocan en brindar soluciones geográficas a empresas gubernamentales.",
+  },
+  {
+    title: "Desarrollador de software",
+    date: "Actualmente...",
+    description: "Diseñando páginas web que se enfocan en brindar soluciones geográficas a empresas gubernamentales.",
+  },
+  {
+    title: "Desarrollador de software",
+    date: "Actualmente...",
+    description: "Diseñando páginas web que se enfocan en brindar soluciones geográficas a empresas gubernamentales.",
+  },
+]
+---
+
+<ol class="relative left-3 border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCIE.map((experience) => (
+      <ExperienceItem {...experience} />
+    ))
+  }
+</ol>
