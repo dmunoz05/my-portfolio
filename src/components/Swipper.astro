@@ -1,0 +1,23 @@
+---
+import Projects from "./Projects.astro"
+import SwipperSlide from "./SwipperSlide.astro"
+---
+
+<style>
+  .swiper {
+    width: auto;
+    height: auto;
+  }
+</style>
+
+<swiper-container class="swiper bg-white text-black" pagination="true" autoplay="true">
+  <SwipperSlide>
+    <Projects />
+  </SwipperSlide>
+  <SwipperSlide>
+    2
+  </SwipperSlide>
+  <SwipperSlide>
+    3
+  </SwipperSlide>
+</swiper-container>
