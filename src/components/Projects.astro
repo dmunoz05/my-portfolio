@@ -2,6 +2,7 @@
 import HTML from "./../assets/icons/Html.astro";
 import JavaScript from "./../assets/icons/JavaScript.astro";
 import Php from "./../assets/icons/Php.astro";
+import Bento from "./Bento.astro";
 
 const TAGS = {
   HTML: {
@@ -9,51 +10,116 @@ const TAGS = {
     class: "bg-black text-white",
     icon: HTML,
   },
-  JavaScript : {
+  JavaScript: {
     name: "JavaScript",
     class: "bg-white text-black",
     icon: JavaScript,
   },
-  Php : {
+  Php: {
     name: "Php",
     class: "bg-black text-white",
     icon: Php,
-  }
+  },
 };
 
 const PROJECTS = [
   {
-    title: "Simulador de Credito - Feinco",
-    description:
-      "Elije el crédito que quieres solicitar, calcula el valor de la cuota o el monto que puedes solicitar de acuerdo con las necesidades de crédito y capacidad de pago.",
+    title: "Feinco",
+    description: "Simulador de creditos",
     link: "https://feinco.com.co/simula-tu-credito/",
     github: "https://github.com/dmunoz05/simulator-credit",
     image: "/feinco.webp",
     tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
   },
+  {
+    title: "Plataformain",
+    description: "Calendario para juntas y negocios empresariales",
+    link: "https://plataformain.com",
+    github: "https://github.com/dmunoz05/calendar-with-js",
+    image: "/platformain.webp",
+    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+  },
+  {
+    title: "Cea Conduzcan S.A.S",
+    description: "Pagina de empresa de conducción",
+    link: "https://ceaconduzcan.com/",
+    github: "",
+    image: "/ceaconduzcan.webp",
+    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+  },
+  {
+    title: "Computer Vision",
+    description: "Calculadora de creditos",
+    link: "https://analyze-and-generate-images-next-js.vercel.app",
+    github: "https://github.com/dmunoz05/analyze-and-generate-images-with-Azure-AI",
+    image: "/computerVision.webp",
+    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+  },
+  {
+    title: "Mavicontrol",
+    description: "Calculadora de creditos",
+    link: "https://www.mavicontrol.com/",
+    github: "",
+    image: "/mavicontrol.webp",
+    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+  },
+  {
+    title: "Landing de Tesla",
+    description: "Calculadora de creditos",
+    link: "https://polite-sprite-9a6722.netlify.app",
+    github: "https://github.com/dmunoz05/landing-tesla",
+    image: "/landingTesla.webp",
+    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+  },
+  {
+    title: "Infinit Pymes",
+    description: "Administrador de negocios",
+    link: "",
+    github: "",
+    image: "/infinitPymes.webp",
+    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+  }
 ];
 ---
-
+<!--
 {
   PROJECTS.map(({ title, description, tags, image }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-sky-400 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row pb-6">
-        {tags.map((tag) => (
-          <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}>
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/100"
-        src={image}
-        alt={`Captura de pantalla del proyecto${image}`}
-      />
-    </article>
+    // Terminar Swipper para responsive
+    <>
+      <article class="relative -z-10 bg-gray-500 w-full h-full shadow-2xl shadow-white/70">
+        <div class="blur-0 z-10">
+          <img
+            class=" size-96 rounded"
+            src={image}
+            alt={`Captura de pantalla del proyecto${image}`}
+          />
+        </div>
+      </article>
+      <article>
+        <h3 class="text-2xl font-semibold text-sky-400 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-4 flex-row pb-6">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-white/100"
+          src={image}
+          alt={`Captura de pantalla del proyecto${image}`}
+        />
+      </article>
+    </>
   ))
-}
+} -->
+
+<div class="grid auto-rows-[300px] grid-cols-3 gap-4">
+  {PROJECTS.map((item, i) => <Bento item={item} i={i} />)}
+</div>
