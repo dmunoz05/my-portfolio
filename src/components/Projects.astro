@@ -3,6 +3,12 @@ import HTML from "./../assets/icons/Html.astro";
 import JavaScript from "./../assets/icons/JavaScript.astro";
 import Php from "./../assets/icons/Php.astro";
 import Bento from "./Bento.astro";
+import Wordpress from "./../assets/icons/Wordpress.astro";
+import NodeJS from "./../assets/icons/NodeJS.astro";
+import React from "./../assets/icons/React.astro";
+import Tailwind from "./../assets/icons/Tailwind.astro";
+import CSS from "../assets/icons/CSS.astro";
+import AstroIcon from "../assets/icons/AstroIcon.astro";
 
 const TAGS = {
   HTML: {
@@ -12,13 +18,43 @@ const TAGS = {
   },
   JavaScript: {
     name: "JavaScript",
-    class: "bg-white text-black",
+    class: "bg-black text-white",
     icon: JavaScript,
   },
   Php: {
     name: "Php",
     class: "bg-black text-white",
     icon: Php,
+  },
+  Wordpress: {
+    name: "Wordpress",
+    class: "bg-black text-white",
+    icon: Wordpress,
+  },
+  NodeJS: {
+    name: "NodeJS",
+    class: "bg-black text-white",
+    icon: NodeJS,
+  },
+  React: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+  Tailwind: {
+    name: "Tailwind",
+    class: "bg-black text-white",
+    icon: Tailwind,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: CSS,
+  },
+  Astro: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
   },
 };
 
@@ -29,7 +65,7 @@ const PROJECTS = [
     link: "https://feinco.com.co/simula-tu-credito/",
     github: "https://github.com/dmunoz05/simulator-credit",
     image: "/feinco.webp",
-    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+    tags: [TAGS.Wordpress, TAGS.JavaScript, TAGS.Php, TAGS.NodeJS, TAGS.CSS],
   },
   {
     title: "Plataformain",
@@ -37,7 +73,7 @@ const PROJECTS = [
     link: "https://plataformain.com",
     github: "https://github.com/dmunoz05/calendar-with-js",
     image: "/platformain.webp",
-    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+    tags: [TAGS.Wordpress, TAGS.JavaScript, TAGS.Php, TAGS.NodeJS, TAGS.CSS],
   },
   {
     title: "Cea Conduzcan S.A.S",
@@ -45,15 +81,16 @@ const PROJECTS = [
     link: "https://ceaconduzcan.com/",
     github: "",
     image: "/ceaconduzcan.webp",
-    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+    tags: [TAGS.Wordpress, TAGS.JavaScript, TAGS.Php, TAGS.NodeJS],
   },
   {
     title: "Computer Vision",
     description: "Calculadora de creditos",
     link: "https://analyze-and-generate-images-next-js.vercel.app",
-    github: "https://github.com/dmunoz05/analyze-and-generate-images-with-Azure-AI",
+    github:
+      "https://github.com/dmunoz05/analyze-and-generate-images-with-Azure-AI",
     image: "/computerVision.webp",
-    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.Tailwind],
   },
   {
     title: "Mavicontrol",
@@ -61,7 +98,7 @@ const PROJECTS = [
     link: "https://www.mavicontrol.com/",
     github: "",
     image: "/mavicontrol.webp",
-    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+    tags: [TAGS.Wordpress, TAGS.HTML, TAGS.JavaScript, TAGS.Php],
   },
   {
     title: "Landing de Tesla",
@@ -69,7 +106,7 @@ const PROJECTS = [
     link: "https://polite-sprite-9a6722.netlify.app",
     github: "https://github.com/dmunoz05/landing-tesla",
     image: "/landingTesla.webp",
-    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
+    tags: [TAGS.Astro, TAGS.Tailwind, TAGS.HTML, TAGS.JavaScript],
   },
   {
     title: "Infinit Pymes",
@@ -77,10 +114,11 @@ const PROJECTS = [
     link: "",
     github: "",
     image: "/infinitPymes.webp",
-    tags: [TAGS.HTML, TAGS.JavaScript, TAGS.Php],
-  }
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.Tailwind],
+  },
 ];
 ---
+
 <!--
 {
   PROJECTS.map(({ title, description, tags, image }) => (
@@ -119,7 +157,6 @@ const PROJECTS = [
     </>
   ))
 } -->
-
 <div class="grid auto-rows-[300px] grid-cols-3 gap-4">
   {PROJECTS.map((item, i) => <Bento item={item} i={i} />)}
 </div>
