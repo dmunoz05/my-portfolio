@@ -1,0 +1,124 @@
+---
+import HTML from "./../assets/icons/Html.astro";
+import JavaScript from "./../assets/icons/JavaScript.astro";
+import TypeScript from "./../assets/icons/TypeScript.astro";
+import Python from "./../assets/icons/Python.astro";
+import Php from "./../assets/icons/Php.astro";
+import Wordpress from "./../assets/icons/Wordpress.astro";
+import NodeJS from "./../assets/icons/NodeJS.astro";
+import React from "./../assets/icons/React.astro";
+import Tailwind from "./../assets/icons/Tailwind.astro";
+import CSS from "../assets/icons/CSS.astro";
+import Git from "../assets/icons/Git.astro";
+import Angular from "../assets/icons/Angular.astro";
+import NextJS from "../assets/icons/NextJS.astro";
+import PostgreSQL from "../assets/icons/PostgreSQL.astro";
+import MySQL from "../assets/icons/MySQL.astro";
+---
+
+<style>
+  .div-swiper {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  ul.ul-one li {
+    display: flex;
+    align-items: center;
+    animation: moveRight 8s linear infinite;
+  }
+
+  ul.ul-two li {
+    display: flex;
+    align-items: center;
+    animation: moveLeft 8s linear infinite;
+  }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(500%);
+    }
+    100% {
+      transform: translateX(
+        -500%
+      );
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-500%);
+    }
+    100% {
+      transform: translateX(
+        500%
+      );
+    }
+  }
+</style>
+
+<div class="div-swiper">
+  <ul class="ul-one">
+    <li>
+      <JavaScript class="size-10" />
+    </li>
+    <li>
+      <TypeScript class="size-10" />
+    </li>
+    <li>
+      <Python class="size-10" />
+    </li>
+    <li>
+      <Php class="size-10" />
+    </li>
+    <li>
+      <Angular class="size-10" />
+    </li>
+    <li>
+      <React class="size-10" />
+    </li>
+    <li>
+      <NextJS class="size-10" />
+    </li>
+  </ul>
+</div>
+
+<div class="div-swiper">
+  <ul class="ul-two">
+    <li>
+      <HTML class="size-10" />
+    </li>
+    <li>
+      <CSS class="size-10" />
+    </li>
+    <li>
+      <Git class="size-10" />
+    </li>
+    <li>
+      <Tailwind class="size-10" />
+    </li>
+    <li>
+      <Wordpress class="size-10" />
+    </li>
+    <li>
+      <NodeJS class="size-10" />
+    </li>
+    <li>
+      <PostgreSQL class="size-10" />
+    </li>
+    <li>
+      <MySQL class="size-10" />
+    </li>
+  </ul>
+</div>

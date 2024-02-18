@@ -7,12 +7,15 @@ import Github from "../assets/icons/Github.astro";
 import Email from "../assets/icons/Email.astro";
 import Brief from "../assets/icons/Brief.astro";
 import Code from "../assets/icons/Code.astro";
+import User from "../assets/icons/User.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import ImageProfile from "../assets/images/foto.jpeg";
 import Swipper from "../components/Swipper.astro";
+import SwiperIcons from "../components/SwiperIcons.astro";
 ---
 
 <Layout
@@ -83,6 +86,14 @@ import Swipper from "../components/Swipper.astro";
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobremi" class="my-14 hidden lg:grid ">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <User class="size-8" />
+        Sobre mi
+      </h2>
+      <About />
     </SectionContainer>
 
     <!-- <br/>
