@@ -8,6 +8,7 @@ import Email from "../assets/icons/Email.astro";
 import Brief from "../assets/icons/Brief.astro";
 import Code from "../assets/icons/Code.astro";
 import User from "../assets/icons/User.astro";
+import ContactUser from "../assets/icons/ContactUser.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
@@ -16,6 +17,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import ImageProfile from "../assets/images/foto.jpeg";
 import Swipper from "../components/Swipper.astro";
 import SwiperIcons from "../components/SwiperIcons.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout
@@ -45,7 +47,7 @@ import SwiperIcons from "../components/SwiperIcons.astro";
             >
             <span>
               Enfocado en la creación de aplicaciones web, <span
-                class="text-yellow-200">modernas e intuitivas.</span
+                class=" text-blue-300">modernas e intuitivas.</span
               ></span
             >
           </h2>
@@ -96,20 +98,13 @@ import SwiperIcons from "../components/SwiperIcons.astro";
       <About />
     </SectionContainer>
 
-    <!-- <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/> -->
+    <SectionContainer id="contactar" class="my-14">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ContactUser class="size-8" />
+        Contactar
+      </h2>
+      <Contact />
+    </SectionContainer>
 
     <!--
     <SectionContainer id="proyectos" class="my-4">
