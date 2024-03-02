@@ -126,7 +126,7 @@ const ContactForm = () => {
             <div className='grow'>
               <textarea
                 value={message}
-                onChange={(event) => setMessage(event.target.value)}
+                onChange={(event) => setMessage(event.target.value.trim())}
                 placeholder='Message'
                 className='border border-zinc-200 rounded-xl py-4 px-4 w-full'
               >
