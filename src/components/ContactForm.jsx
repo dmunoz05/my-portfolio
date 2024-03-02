@@ -12,8 +12,6 @@ const ContactForm = () => {
     sendEmail(data);
   };
 
-  const apiGmail = 'https://send-email-porfolio.vercel.app/send/mail';
-
   const sendEmail = async () => {
     alert('')
     const result = await fetch(apiGmail, {
