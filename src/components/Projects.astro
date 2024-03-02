@@ -115,48 +115,9 @@ const PROJECTS = [
     github: "",
     image: "/infinitPymes.webp",
     tags: [TAGS.React, TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.Tailwind],
-  },
+  }
 ];
 ---
-
-<!--
-{
-  PROJECTS.map(({ title, description, tags, image }) => (
-    // Terminar Swipper para responsive
-    <>
-      <article class="relative -z-10 bg-gray-500 w-full h-full shadow-2xl shadow-white/70">
-        <div class="blur-0 z-10">
-          <img
-            class=" size-96 rounded"
-            src={image}
-            alt={`Captura de pantalla del proyecto${image}`}
-          />
-        </div>
-      </article>
-      <article>
-        <h3 class="text-2xl font-semibold text-sky-400 mb-2">{title}</h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
-        <ul class="flex gap-x-4 flex-row pb-6">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-        <img
-          class="rounded shadow-2xl shadow-white/100"
-          src={image}
-          alt={`Captura de pantalla del proyecto${image}`}
-        />
-      </article>
-    </>
-  ))
-} -->
 <div class="grid auto-rows-[300px] grid-cols-3 gap-4">
   {PROJECTS.map((item, i) => <Bento item={item} i={i} />)}
 </div>
