@@ -39,9 +39,9 @@ const ContactForm = () => {
   const sendEmail = async () => {
     axios.post('https://send-email-porfolio.vercel.app/send/mail',
       {
-        'firstname': firstName,
-        'secondname': secondName,
-        'email': email,
+        'firstname': firstName.trim(),
+        'secondname': secondName.trim(),
+        'email': email.trim(),
         'message': message
       })
       .then(function (response) {
@@ -75,7 +75,7 @@ const ContactForm = () => {
             <div className='grow'>
               <input
                 value={firstName}
-                onChange={(event) => setFirstName(event.target.value.trim())}
+                onChange={(event) => setFirstName(event.target.value)}
                 placeholder='First name'
                 className='border border-zinc-200 rounded-full py-2 px-4 w-full'
               />
@@ -91,7 +91,7 @@ const ContactForm = () => {
             <div className='grow'>
               <input
                 value={secondName}
-                onChange={(event) => setSecondName(event.target.value.trim())}
+                onChange={(event) => setSecondName(event.target.value)}
                 autoComplete='off'
                 placeholder='Last name'
                 className='border border-zinc-200 rounded-full py-2 px-4 w-full'
@@ -109,7 +109,7 @@ const ContactForm = () => {
             <div className='grow'>
               <input
                 value={email}
-                onChange={(event) => setEmail(event.target.value.trim())}
+                onChange={(event) => setEmail(event.target.value)}
                 placeholder='you@email.com'
                 className='border border-zinc-200 rounded-full py-2 px-4 w-full'
               />
@@ -126,7 +126,7 @@ const ContactForm = () => {
             <div className='grow'>
               <textarea
                 value={message}
-                onChange={(event) => setMessage(event.target.value.trim())}
+                onChange={(event) => setMessage(event.target.value)}
                 placeholder='Message'
                 className='border border-zinc-200 rounded-xl py-4 px-4 w-full'
               >

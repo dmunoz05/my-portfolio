@@ -79,12 +79,20 @@ import Contact from "../components/Contact.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos" class="my-4 hidden lg:grid ">
+    <SectionContainer id="proyectos" class="my-4 hidden lg:grid">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
         <Code class="size-8" />
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos" class="my-4 block sm:hidden">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-8" />
+        Proyectos
+      </h2>
+      <Swipper/>
     </SectionContainer>
 
     <SectionContainer id="sobremi" class="my-14">
@@ -102,14 +110,5 @@ import Contact from "../components/Contact.astro";
       </h2>
       <Contact />
     </SectionContainer>
-
-    <!--
-    <SectionContainer id="proyectos" class="my-4">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <Code class="size-8" />
-        Proyectos
-      </h2>
-      <Swipper/>
-    </SectionContainer> -->
   </main>
 </Layout>
