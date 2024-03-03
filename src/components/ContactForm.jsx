@@ -45,9 +45,11 @@ const ContactForm = () => {
         'message': message
       })
       .then(function (response) {
+        console.log(response)
         clearFields()
       })
       .catch(function (error) {
+        console.log(error)
         setLoading(false)
         setEmpyes(false)
       });

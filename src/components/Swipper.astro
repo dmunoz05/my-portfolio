@@ -1,5 +1,4 @@
 ---
-import Projects from "./Projects.astro";
 import SwipperSlide from "./SwipperSlide.astro";
 import { PROJECTS } from "./Projects.astro";
 ---
@@ -11,7 +10,7 @@ import { PROJECTS } from "./Projects.astro";
   {
     PROJECTS.map(
       (item, i) => (
-        <SwipperSlide class="h-full rounded-2xl">
+        <SwipperSlide id={i} class="h-full rounded-2xl">
           <a
             href={item.link}
             target="_blank"

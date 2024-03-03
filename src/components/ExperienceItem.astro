@@ -2,12 +2,11 @@
 interface Props {
   title: string;
   description: string;
-  link?: string;
   date: string;
   empresa: string;
 }
 
-const { title, description, link, date, empresa } = Astro.props;
+const { title, description, date, empresa } = Astro.props;
 ---
 
 <li class="mb-16 ms-6">
