@@ -51,19 +51,19 @@ import Contact from "../components/Contact.astro";
             >
           </h2>
 
-          <nav class="flex items-center gap-x-4 justify-start w-full pt-4">
+          <nav class="flex items-center gap-x-4 justify-center sm:justify-start w-full pt-4">
             <SocialIcons target="_blank" href="https://github.com/dmunoz05"
             >
             <Github class="size-6" />
-            Github
+            <span class="hidden sm:block">Github</span>
           </SocialIcons>
           <SocialIcons target="_blank" href="https://www.linkedin.com/in/dmunoz05/">
             <LinkedIn class="size-6" />
-            LinkedIn
+            <span class="hidden sm:block">LinkedIn</span>
           </SocialIcons>
             <SocialIcons href="/#contactar">
               <Email class="size-6" />
-              Gmail
+              <span class="hidden sm:block">Gmail</span>
             </SocialIcons>
           </nav>
         </div>
