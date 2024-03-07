@@ -25,9 +25,9 @@ const { title, description, date, empresa } = Astro.props;
       ></path>
     </svg>
   </span>
-  <h3 class="flex items-center ml-1 mb-1 pb-2 text-sm font-semibold text-white">
+  <h3 class="grid sm:flex items-center ml-1 mb-1 pb-2 text-sm justify-start sm:justify-normal font-semibold text-white">
     {empresa} <span
-      class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3"
+      class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300  my-2 sm:ms-3"
       >{date}</span
     >
   </h3>
