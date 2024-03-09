@@ -17,6 +17,8 @@ import SectionContainer from "../components/SectionContainer.astro";
 import ImageProfile from "../assets/images/foto.jpeg";
 import Swipper from "../components/Swipper.astro";
 import Contact from "../components/Contact.astro";
+import DownloadButton from "../components/DownloadButton.astro"
+import DownloadCV from "../components/DownloadCV.jsx";
 ---
 
 <Layout
@@ -51,20 +53,20 @@ import Contact from "../components/Contact.astro";
             >
           </h2>
 
-          <nav class="flex items-center gap-x-4 justify-center sm:justify-start w-full pt-4">
-            <SocialIcons target="_blank" href="https://github.com/dmunoz05"
-            >
-            <Github class="size-6" />
-            <span class="hidden sm:block">Github</span>
-          </SocialIcons>
-          <SocialIcons target="_blank" href="https://www.linkedin.com/in/dmunoz05/">
-            <LinkedIn class="size-6" />
-            <span class="hidden sm:block">LinkedIn</span>
-          </SocialIcons>
+          <nav class="flex items-center gap-x-4 justify-start w-full pt-4">
+            <SocialIcons target="_blank" href="https://github.com/dmunoz05">
+              <Github class="size-6" />
+              <span class="hidden sm:block">Github</span>
+            </SocialIcons>
+            <SocialIcons target="_blank" href="https://www.linkedin.com/in/dmunoz05/">
+              <LinkedIn class="size-6" />
+              <span class="hidden sm:block">LinkedIn</span>
+            </SocialIcons>
             <SocialIcons href="/#contactar">
               <Email class="size-6" />
               <span class="hidden sm:block">Gmail</span>
             </SocialIcons>
+            <DownloadButton />
           </nav>
         </div>
       </div>
