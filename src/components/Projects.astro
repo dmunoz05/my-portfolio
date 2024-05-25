@@ -1,16 +1,35 @@
 ---
-import HTML from "./../assets/icons/Html.astro";
-import JavaScript from "./../assets/icons/JavaScript.astro";
-import Php from "./../assets/icons/Php.astro";
+import Angular from "../assets/icons/Angular.astro";
+import Github from "../assets/icons/Github.astro";
+import Django from "../assets/icons/Django.astro";
+import HTML from "../assets/icons/Html.astro";
+import JavaScript from "../assets/icons/JavaScript.astro";
+import TypeScript from "../assets/icons/TypeScript.astro";
+import Php from "../assets/icons/Php.astro";
 import Bento from "./Bento.astro";
-import Wordpress from "./../assets/icons/Wordpress.astro";
-import NodeJS from "./../assets/icons/NodeJS.astro";
-import React from "./../assets/icons/React.astro";
-import Tailwind from "./../assets/icons/Tailwind.astro";
+import Wordpress from "../assets/icons/Wordpress.astro";
+import NodeJS from "../assets/icons/NodeJS.astro";
+import React from "../assets/icons/React.astro";
+import Tailwind from "../assets/icons/Tailwind.astro";
 import CSS from "../assets/icons/CSS.astro";
 import AstroIcon from "../assets/icons/AstroIcon.astro";
 
 export const TAGS = {
+  Github: {
+    name: "Github",
+    class: "bg-black text.white",
+    icon: Github
+  },
+  Django: {
+    name: "Django",
+    class: "bg-black text-white",
+    icon: Django
+  },
+  Angular: {
+    name: "Angular",
+    class: "bg-black text-white",
+    icon: Angular
+  },
   HTML: {
     name: "HTML",
     class: "bg-black text-white",
@@ -20,6 +39,11 @@ export const TAGS = {
     name: "JavaScript",
     class: "bg-black text-white",
     icon: JavaScript,
+  },
+  TypeScript: {
+    name: "TypeScript",
+    class: "bg-black text-white",
+    icon: TypeScript,
   },
   Php: {
     name: "Php",
@@ -71,18 +95,18 @@ export const PROJECTS = [
     title: "Plataformain",
     description: "Calendario para juntas y negocios empresariales",
     link: "https://plataformain.com",
-    github: "https://github.com/dmunoz05/calendar-with-js",
+    github: "",
     image: "/platformain.webp",
     tags: [TAGS.Wordpress, TAGS.JavaScript, TAGS.Php, TAGS.NodeJS, TAGS.CSS],
   },
-  {
-    title: "Cea Conduzcan S.A.S",
-    description: "Pagina de empresa de conducción",
-    link: "https://ceaconduzcan.com/",
-    github: "",
-    image: "/ceaconduzcan.webp",
-    tags: [TAGS.Wordpress, TAGS.JavaScript, TAGS.Php, TAGS.NodeJS],
-  },
+  // {
+  //   title: "Cea Conduzcan S.A.S",
+  //   description: "Pagina de empresa de conducción",
+  //   link: "https://ceaconduzcan.com/",
+  //   github: "",
+  //   image: "/ceaconduzcan.webp",
+  //   tags: [TAGS.Wordpress, TAGS.JavaScript, TAGS.Php, TAGS.NodeJS],
+  // },
   {
     title: "Computer Vision",
     description: "Calculadora de creditos",
@@ -115,9 +139,17 @@ export const PROJECTS = [
     github: "",
     image: "/infinitPymes.webp",
     tags: [TAGS.React, TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.Tailwind],
+  },
+  {
+    title: "Images PyXpert",
+    description: "Manipulación de imagenes",
+    link: "https://images-pyxpert-frontend.vercel.app",
+    github: "",
+    image: "/imagesPyXpert.webp",
+    tags: [TAGS.Angular, TAGS.Django, TAGS.TypeScript, TAGS.HTML, TAGS.Tailwind],
   }
 ];
 ---
-<div class="grid auto-rows-[300px] grid-cols-3 gap-4">
+<div class="grid auto-rows-auto grid-cols-2 gap-8 m-4">
   {PROJECTS.map((item, i) => <Bento item={item} i={i} />)}
 </div>
