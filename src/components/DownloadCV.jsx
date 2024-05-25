@@ -1,5 +1,3 @@
-import DownloadIcon from "../assets/icons/DownloadIcon.astro"
-import SocialIcons from "../components/SocialIcons.astro"
 import pdf from "../assets/docs/cv.pdf"
 
 function DownloadCv() {
