@@ -5,13 +5,29 @@ const { item, i } = Astro.props;
 <div class="relative grid grid-cols-1 justify-center items-center mb-4">
   <h1 class="text-xl w-full text-center font-medium pb-2">{item.title}</h1>
   <article class="relative">
-    <a href={item.link} target="_blank" class="relative rounded-2xl">
-      <img
-        class="hover:blur-sm h-72 w-full rounded-2xl"
-        src={item.image}
-        alt={`Captura de pantalla del proyecto ${item.title}`}
-      />
-    </a>
+    {
+      item.link !== "" && (
+        <a href={item.link} target="_blank" class="relative rounded-2xl">
+          <img
+            class="hover:blur-sm h-72 w-full rounded-2xl"
+            src={item.image}
+            alt={`Captura de pantalla del proyecto ${item.title}`}
+          />
+        </a>
+      )
+    }
+
+    {
+      item.link === "" && (
+        <div class="relative rounded-2xl">
+          <img
+            class="hover:blur-sm h-72 w-full rounded-2xl"
+            src={item.image}
+            alt={`Captura de pantalla del proyecto ${item.title}`}
+          />
+        </div>
+      )
+    }
   </article>
   <section class="pb -5">
     <ul class="relative flex gap-x-4 flex-row justify-center w-full p-2">
@@ -72,8 +88,7 @@ const { item, i } = Astro.props;
             flex justify-center items-center gap-x-2
             py-2 px-4
             transition
-            hover:scale-110 hover:bg-slate-400
-            cursor-pointer"
+            hover:scale-110 hover:bg-slate-400"
         >
           En proceso
         </button>
