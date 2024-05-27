@@ -1,6 +1,5 @@
 ---
 const { item, i } = Astro.props;
-import Github from "../assets/icons/Github.astro";
 ---
 
 <div class="relative grid grid-cols-1 justify-center items-center mb-4">
@@ -66,7 +65,7 @@ import Github from "../assets/icons/Github.astro";
       )
     }
     {
-      item.link === "" && item.github === "" && (
+      item.link === "" && (
         <button
           class="bg-slate-400 relative
             border border-slate-400/10 rounded-full

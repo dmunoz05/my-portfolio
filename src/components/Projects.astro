@@ -13,11 +13,17 @@ import React from "../assets/icons/React.astro";
 import Tailwind from "../assets/icons/Tailwind.astro";
 import CSS from "../assets/icons/CSS.astro";
 import AstroIcon from "../assets/icons/AstroIcon.astro";
+import NextJS from "../assets/icons/NextJS.astro";
 
 export const TAGS = {
+  NextJS: {
+    name: "NextJS",
+    class: "bg-black text-white",
+    icon: NextJS
+  },
   Github: {
     name: "Github",
-    class: "bg-black text.white",
+    class: "bg-black text-white",
     icon: Github
   },
   Django: {
@@ -155,6 +161,14 @@ export const PROJECTS = [
     github: "",
     image: "/hygconsultores.webp",
     tags: [TAGS.Wordpress, TAGS.HTML, TAGS.JavaScript, TAGS.CSS, TAGS.Php],
+  },
+  {
+    title: "UI dm-5ive",
+    description: "Libreria para componentes de React",
+    link: "",
+    github: "https://github.com/dmunoz05/ui-dm-5ive",
+    image: "/uiDm5ive.webp",
+    tags: [TAGS.NextJS, TAGS.HTML, TAGS.React, TAGS.JavaScript, TAGS.CSS],
   }
 ];
 ---
