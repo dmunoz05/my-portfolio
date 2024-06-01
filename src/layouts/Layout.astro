@@ -27,7 +27,7 @@ const { title, description } = Astro.props;
 
   <body
     id="top"
-    class="[background:radial-gradient(105%_105%_at_50%_50%,#000_35%,#63e_100%)]"
+    class="bg-blue-100 dark:[background:radial-gradient(105%_105%_at_50%_50%,#000_35%,#63e_100%)]"
   >
     <Header />
     <slot />
@@ -36,9 +36,9 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global>
-  :root {
+  /* :root {
     color-scheme: light dark;
-  }
+  } */
 
   html {
     font-family: "Onest Variable", sans-serif;
