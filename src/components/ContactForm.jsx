@@ -79,7 +79,7 @@ const ContactForm = () => {
                 value={firstName}
                 onChange={(event) => setFirstName(event.target.value)}
                 placeholder='First name'
-                className='border border-zinc-200 rounded-full py-2 px-4 w-full'
+                className='border dark:border-zinc-200 border-black rounded-full py-2 px-4 w-full'
               />
               {
                 !empyes ? (
@@ -96,7 +96,7 @@ const ContactForm = () => {
                 onChange={(event) => setSecondName(event.target.value)}
                 autoComplete='off'
                 placeholder='Last name'
-                className='border border-zinc-200 rounded-full py-2 px-4 w-full'
+                className='border dark:border-zinc-200 border-black rounded-full py-2 px-4 w-full'
               />
               {
                 !empyes ? (
@@ -113,7 +113,7 @@ const ContactForm = () => {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder='you@email.com'
-                className='border border-zinc-200 rounded-full py-2 px-4 w-full'
+                className='border dark:border-zinc-200 border-black rounded-full py-2 px-4 w-full'
               />
               {
                 !empyes ? (
@@ -130,7 +130,7 @@ const ContactForm = () => {
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 placeholder='Message'
-                className='border border-zinc-200 rounded-xl py-4 px-4 w-full'
+                className='border dark:border-zinc-200 border-black rounded-xl py-4 px-4 w-full'
               >
               </textarea>
               {
@@ -143,7 +143,7 @@ const ContactForm = () => {
             </div>
           </div>
           <div className='flex justify-end'>
-            <button onClick={() => onSubmit()} className='px-4 py-2 text-white font-medium rounded-full bg-gray-500'>
+            <button onClick={() => onSubmit()} className='px-4 py-2 text-white font-medium rounded-full dark:bg-gray-500 bg-black'>
               Enviar
             </button>
           </div>

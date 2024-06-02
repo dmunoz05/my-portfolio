@@ -6,7 +6,6 @@ const ButtonColor = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   function changeColor() {
-    debugger
     setDarkMode(!darkMode)
     const html = document.querySelector('html');
     html.classList.toggle('dark');
@@ -18,7 +17,7 @@ const ButtonColor = () => {
   }, []);
 
   return (
-    <div className='flex flex-col items-center justify-center'>
+    <div className='flex flex-col items-center justify-center bg-black p-2 rounded-full'>
       {darkMode ? (
         <button
           className='flex flex-col items-center justify-center'

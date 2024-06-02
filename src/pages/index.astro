@@ -28,24 +28,24 @@ import DownloadButton from "../components/DownloadButton.astro"
     <SectionContainer class="py-16 lg:py-36">
       <div class="flex flex-col lg:flex-row gap-4">
         <Image
-          class="rounded-full w-64 h-64 sm:w-80 sm:h-80"
+          class="rounded-full p-1 bg-black dark:bg-transparent w-64 h-64 sm:w-80 sm:h-80"
           src={ImageProfile}
           alt="daniel-foto"
         />
         <div class="flex flex-col justify-end items-end pb-6">
           <h1
-            class="text-white text-5xl font-bold w-full flex justify-start flex-row gap-x-4 pb-4"
+            class="text-black dark:text-white text-5xl font-bold w-full flex justify-start flex-row gap-x-4 pb-4"
           >
             Hey, Soy Daniel <div class="flex justify-center items-center">
               <Badge>Disponible</Badge>
             </div>
           </h1>
           <h2 class="text-xl">
-            <span>+2 años de experiencia en el</span>
+            <span class="text-black dark:text-white" >+2 años de experiencia en el</span>
             <span class="text-sky-400">Desarrollado Web</span><span
-              class="text-gray-500/90">. De Colombia, Medellín.</span
+              class="dark:text-gray-500/90 text-black">. De Colombia, Medellín.</span
             >
-            <span>
+            <span class="text-black dark:text-white" >
               Enfocado en la creación de aplicaciones web, <span
                 class="text-sky-400">modernas e intuitivas.</span
               ></span
@@ -55,15 +55,15 @@ import DownloadButton from "../components/DownloadButton.astro"
           <nav class="flex items-center gap-x-4 justify-start w-full pt-4">
             <SocialIcons target="_blank" href="https://github.com/dmunoz05">
               <Github class="size-6" />
-              <span class="hidden sm:block">Github</span>
+              <span class="hidden sm:block text-white">Github</span>
             </SocialIcons>
             <SocialIcons target="_blank" href="https://www.linkedin.com/in/dmunoz05/">
               <LinkedIn class="size-6" />
-              <span class="hidden sm:block">LinkedIn</span>
+              <span class="hidden sm:block text-white">LinkedIn</span>
             </SocialIcons>
             <SocialIcons href="/#contactar">
               <Email class="size-6" />
-              <span class="hidden sm:block">Gmail</span>
+              <span class="hidden sm:block text-white">Gmail</span>
             </SocialIcons>
             <DownloadButton />
           </nav>
@@ -72,7 +72,7 @@ import DownloadButton from "../components/DownloadButton.astro"
     </SectionContainer>
 
     <SectionContainer id="experiencia" class="my-4">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white">
         <Brief class="size-6" />
         Experiencia laboral
       </h2>
@@ -80,7 +80,7 @@ import DownloadButton from "../components/DownloadButton.astro"
     </SectionContainer>
 
     <SectionContainer id="proyectos" class="my-4 hidden lg:grid">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white">
         <Code class="size-8" />
         Proyectos
       </h2>
@@ -88,7 +88,7 @@ import DownloadButton from "../components/DownloadButton.astro"
     </SectionContainer>
 
     <SectionContainer id="proyectos" class="my-4 block sm:hidden">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white">
         <Code class="size-8" />
         Proyectos
       </h2>
@@ -96,7 +96,7 @@ import DownloadButton from "../components/DownloadButton.astro"
     </SectionContainer>
 
     <SectionContainer id="sobremi" class="my-14">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white">
         <User class="size-8" />
         Sobre mi
       </h2>
@@ -104,7 +104,7 @@ import DownloadButton from "../components/DownloadButton.astro"
     </SectionContainer>
 
     <SectionContainer id="contactar" class="my-14">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white">
         <ContactUser class="size-8" />
         Contactar
       </h2>
